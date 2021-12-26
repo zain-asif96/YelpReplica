@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- rating popup form -->
+    <div
+      class="modal fade popup-modal"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              class="modal-title text-center flex-grow-1"
+              id="exampleModalLabel"
+            >
+              Add A Review
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <label for="rating-label" class="d-block">
+                Select your rating
+              </label>
+              <div class="rate">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+              </div>
+              <textarea
+                class="w-100 p-3"
+                name="review-text"
+                id="review-text"
+                cols="30"
+                rows="10"
+                placeholder="Write your review here..."
+              ></textarea>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary w-25"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="modal-submit-btn w-25">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- header -->
+    <section class="hero-sec">
+      <nav
+        class="
+          navbar navbar-expand-lg navbar-light
+          bg-transparent
+          custom-navbar
+        "
+      >
+        <div class="container">
+          <div class="logo-wrapper-responsive">
+            <a class="navbar-brand" href="#">
+              <img src="assets/sample-logo.png" alt="Logo" />
+            </a>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"
+                  >Add a review <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Talk</a>
+              </li>
+            </ul>
+
+            <div class="nav-buttons">
+              <a href="./login/index.html"> Login </a>
+              <a href="./signup/index.html">Signup</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container mt-5 pt-5">
+        <div class="row mb-3">
+          <div class="col-12 text-center">
+            <div class="logo-wrapper-hero">
+              <img src="assets/sample-logo.png" alt="Logo" />
+            </div>
+          </div>
+        </div>
+
+        <form id="find_form" class="">
+          <div class="find-form-wrapper">
+            <div class="prof-input-wrapper">
+              <span>Find</span>
+              <input
+                type="text"
+                placeholder="nail salons, plumbers, takeout..."
+              />
+            </div>
+            <div class="location-input-wrapper">
+              <span>Near</span>
+              <input
+                type="text"
+                placeholder="address, neighborhood, city, state or zip"
+              />
+              <div class="find-form-submit">
+                <button type="submit">
+                  <img src="./assets/search-icon.png" alt="search-icon" />
+                </button>
+              </div>
+            </div>
+            <div class="find-form-submit-responsive">
+              <button type="submit">Search</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="business-sec-styles py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="text-center my-2 font-weight-bold business-heading">
+              Find the Best Businesses in Town
+            </h1>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-md-3 col-sm-12 my-3">
+            <div href="#" class="card-wrapper">
+              <div class="card">
+                <img
+                  src="./assets/dentists.jpg"
+                  class="card-img-top"
+                  alt="Business Image"
+                />
+                <div class="card-body">
+                  <h5 class="card-info-title text-center">
+                    <a href="#">Dentists</a>
+                  </h5>
+                  <div
+                    class="
+                      d-flex
+                      align-items-center
+                      justify-content-center
+                      mt-2
+                    "
+                  >
+                    <p
+                      class="review-btn"
+                      data-toggle="modal"
+                      data-target="#exampleModal"
+                    >
+                      <span><i class="fa fa-star"></i></span>Write a review
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-12 my-3">
+            <div href="#" class="card-wrapper">
+              <div class="card">
+                <img
+                  src="./assets/dentists.jpg"
+                  class="card-img-top"
+                  alt="Business Image"
+                />
+                <div class="card-body">
+                  <h5 class="card-info-title text-center">
+                    <a href="#">Dentists</a>
+                  </h5>
+                  <div
+                    class="
+                      d-flex
+                      align-items-center
+                      justify-content-center
+                      mt-2
+                    "
+                  >
+                    <p
+                      class="review-btn"
+                      data-toggle="modal"
+                      data-target="#exampleModal"
+                    >
+                      <span><i class="fa fa-star"></i></span>Write a review
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-12 my-3">
+            <div href="#" class="card-wrapper">
+              <div class="card">
+                <img
+                  src="./assets/dentists.jpg"
+                  class="card-img-top"
+                  alt="Business Image"
+                />
+                <div class="card-body">
+                  <h5 class="card-info-title text-center">
+                    <a href="#">Dentists</a>
+                  </h5>
+                  <div
+                    class="
+                      d-flex
+                      align-items-center
+                      justify-content-center
+                      mt-2
+                    "
+                  >
+                    <p
+                      class="review-btn"
+                      data-toggle="modal"
+                      data-target="#exampleModal"
+                    >
+                      <span><i class="fa fa-star"></i></span>Write a review
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-12 my-3">
+            <div href="#" class="card-wrapper">
+              <div class="card">
+                <img
+                  src="./assets/dentists.jpg"
+                  class="card-img-top"
+                  alt="Business Image"
+                />
+                <div class="card-body">
+                  <h5 class="card-info-title text-center">
+                    <a href="#">Dentists</a>
+                  </h5>
+                  <div
+                    class="
+                      d-flex
+                      align-items-center
+                      justify-content-center
+                      mt-2
+                    "
+                  >
+                    <p
+                      class="review-btn"
+                      data-toggle="modal"
+                      data-target="#exampleModal"
+                    >
+                      <span><i class="fa fa-star"></i></span>Write a review
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
